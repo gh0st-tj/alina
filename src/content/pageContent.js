@@ -8,8 +8,8 @@ const pageContent = {
   
   // Memory Section
   memories: {
-    title: "Some of Our Greatest Moments",
-    description: "I'll always remember these moments",
+    title: "Our Best Moments",
+    description: "Every couple has special moments. Here are some of our memories that I'll always remember.",
     items: [
       {
         title: "Our First Photo",
@@ -65,20 +65,20 @@ const pageContent = {
   
   // What's Changed Section
   changes: {
-    title: "What's Different Now",
-    description: "I've taken time to work on myself and grow from our experience.",
+    title: "What Has Changed",
+    description: "I've gone through a process of growth and development. Here are some of the changes I've made:",
     items: [
       {
-        title: "Serious and Exclusive Relationship",
-        description: "My mistake was not being ready for so long. I am ready now."
+        title: "Better Communication",
+        description: "I didn't always listen and didn't always communicate what I was feeling. Even when things are good, I need to share, like during our trip."
       },
       {
-        title: "Life Plan",
-        description: "I have a plan for our life together and I'm dying to share it with you."
+        title: "Better Balance",
+        description: "I've organized my life, and now there's room for what truly matters. This also applies to gaming."
       },
       {
-        title: "Balanced Priorities",
-        description: "I've restructured my life to make room for what truly matters."
+        title: "Real Commitment",
+        description: "I truly believe we can build something good together."
       }
     ]
   },
