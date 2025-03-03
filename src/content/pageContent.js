@@ -32,11 +32,11 @@ const pageContent = {
   // What Went Wrong Section
   reflection: {
     title: "What I've Learned",
-    description: "Every relationship faces challenges. I've taken time to reflect on ours.",
+    description: "No relationship is without challenges. I've thought a lot about ours, and I've understood a few things.",
     points: [
       {
         title: "Communication",
-        description: "I realize now that I didn't always listen as well as I could have. I've learned to be more present."
+        description: "I didn't always listen as well as I should have, and I didn't share what I was going through. Sometimes even when things were good."
       },
       {
         title: "Priorities",
@@ -66,19 +66,19 @@ const pageContent = {
   // What's Changed Section
   changes: {
     title: "What Has Changed",
-    description: "I've gone through a process of growth and development. Here are some of the changes I've made:",
+    description: "I've invested in myself, understood things, and I'm ready to be better.",
     items: [
       {
-        title: "Better Communication",
-        description: "I didn't always listen and didn't always communicate what I was feeling. Even when things are good, I need to share, like during our trip."
+        title: "Serious and Exclusive Relationship",
+        description: "My mistake for not being ready for so long. I'm ready now."
+      },
+      {
+        title: "Life Plan",
+        description: "I have a plan for our life and I'm dying to share it with you."
       },
       {
         title: "Better Balance",
-        description: "I've organized my life, and now there's room for what truly matters. This also applies to gaming."
-      },
-      {
-        title: "Real Commitment",
-        description: "I truly believe we can build something good together."
+        description: "I've organized my life, and now there's room for what truly matters. I've stopped gaming."
       }
     ]
   },
@@ -92,8 +92,8 @@ const pageContent = {
   // Future Vision Section
   future: {
     title: "The Future I See For Us",
-    description: "I believe we can build something beautiful and special.",
-    vision: "I have a plan and I want to share it with you. I want to build a life together with you. I know this might sound cliché to you, but I'm just asking you to listen to me"
+    description: "I truly believe we can build something good together.",
+    vision: "I have a plan and I want to share it with you. I want to build a life together with you. I know this might sound cliché to you, but I'm just asking you to listen to what I have to say."
   },
   
   // Call To Action Section
@@ -104,7 +104,10 @@ const pageContent = {
     contactInfo: "You know how to find me\nEmail: tomsomech1@gmail.com\nWhatsApp: +972509781166",
     footer: "In whatever way you prefer to communicate. Really looking forward to hearing from you",
     popupMessage: "Happy that you want to connect. You know how to reach me. 5 minutes talk is all I'm asking for."
-  }
+  },
+  
+  // Page Title
+  pageTitle: "Our Second Chance"
 };
 
 export default pageContent; 
