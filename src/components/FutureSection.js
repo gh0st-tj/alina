@@ -58,7 +58,7 @@ const FutureSection = () => {
             </div>
             
             <p className="text-xl text-center italic text-gray-700 mt-4 transform transition-all duration-700 hover:scale-105">
-              "{vision}"
+              {vision}
             </p>
             
             <div 
