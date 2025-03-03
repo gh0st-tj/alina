@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import pageContent from '../content/pageContent';
 import pageContentHe from '../content/pageContentHe';
-import { FaHeart } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
@@ -40,10 +39,6 @@ const HeroSection = () => {
       </div>
       
       <div className="container-custom relative z-10 text-center" dir={dir}>
-        <div className="inline-block mb-4">
-          <FaHeart className="text-primary text-4xl mx-auto animate-pulse" />
-        </div>
-        
         <h1 ref={headlineRef} className="heading-xl mb-6 text-dark opacity-0 transition-all duration-1000 ease-out">
           {headline}
         </h1>

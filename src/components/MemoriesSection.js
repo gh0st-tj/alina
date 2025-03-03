@@ -39,10 +39,19 @@ const MemoriesSection = () => {
   const scrollToSlide = (index) => {
     if (sliderRef.current) {
       const slideWidth = sliderRef.current.offsetWidth;
-      sliderRef.current.scrollTo({
-        left: index * slideWidth,
-        behavior: 'smooth'
-      });
+      // Adjust scroll position based on language direction
+      if (language === 'he') {
+        const totalWidth = slideWidth * (items.length - 1);
+        sliderRef.current.scrollTo({
+          left: totalWidth - (index * slideWidth),
+          behavior: 'smooth'
+        });
+      } else {
+        sliderRef.current.scrollTo({
+          left: index * slideWidth,
+          behavior: 'smooth'
+        });
+      }
       setCurrentSlide(index);
     }
   };
@@ -51,7 +60,18 @@ const MemoriesSection = () => {
     if (sliderRef.current && isMobile) {
       const slideWidth = sliderRef.current.offsetWidth;
       const scrollPosition = sliderRef.current.scrollLeft;
-      const newSlide = Math.round(scrollPosition / slideWidth);
+      let newSlide;
+      
+      if (language === 'he') {
+        const totalWidth = slideWidth * (items.length - 1);
+        newSlide = Math.round((totalWidth - scrollPosition) / slideWidth);
+      } else {
+        newSlide = Math.round(scrollPosition / slideWidth);
+      }
+      
+      // Ensure newSlide is within bounds
+      newSlide = Math.max(0, Math.min(newSlide, items.length - 1));
+      
       if (newSlide !== currentSlide) {
         setCurrentSlide(newSlide);
       }
@@ -110,7 +130,7 @@ const MemoriesSection = () => {
         <div className="md:hidden">
           <div 
             ref={sliderRef}
-            className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+            className={`flex overflow-x-auto snap-x snap-mandatory scrollbar-hide ${language === 'he' ? 'flex-row-reverse' : ''}`}
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             onScroll={handleScroll}
           >
