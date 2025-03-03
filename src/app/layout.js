@@ -1,7 +1,7 @@
 import './globals.css';
 import { LanguageProvider } from '../context/LanguageContext';
 import LanguageToggle from '../components/LanguageToggle';
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   title: 'Our Second Chance',
