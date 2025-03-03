@@ -1,5 +1,6 @@
 import './globals.css';
 import { LanguageProvider } from '../context/LanguageContext';
+import { AuthProvider } from '../context/AuthContext';
 import LanguageToggle from '../components/LanguageToggle';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -12,11 +13,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <LanguageProvider>
-          <LanguageToggle />
-          {children}
-          <Analytics />
-        </LanguageProvider>
+        <AuthProvider>
+          <LanguageProvider>
+            <LanguageToggle />
+            {children}
+            <Analytics />
+          </LanguageProvider>
+        </AuthProvider>
       </body>
     </html>
   );

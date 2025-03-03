@@ -1,3 +1,7 @@
+"use client";
+
+import { useAuth } from '../context/AuthContext';
+import LoginScreen from '../components/LoginScreen';
 import HeroSection from '../components/HeroSection';
 import PhotoSlider from '../components/PhotoSlider';
 import MemoriesSection from '../components/MemoriesSection';
@@ -9,6 +13,12 @@ import FutureSection from '../components/FutureSection';
 import CallToActionSection from '../components/CallToActionSection';
 
 export default function Home() {
+  const { isAuthenticated } = useAuth();
+
+  if (!isAuthenticated) {
+    return <LoginScreen />;
+  }
+
   return (
     <main className="snap-container">
       <section className="snap-section">
