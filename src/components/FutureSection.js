@@ -21,7 +21,7 @@ const FutureSection = () => {
   return (
     <section className="h-full flex items-center bg-gradient-to-b from-secondary/10 to-light relative">
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/images/hero-bg2.jpg')] bg-cover bg-center opacity-40"></div>
         <div className="absolute inset-0 bg-white/70"></div>
       </div>
       <div className="container-custom py-8 relative z-10">
