@@ -2,11 +2,12 @@ import { NextResponse } from 'next/server';
 import jwt from 'jsonwebtoken';
 
 // Get secrets from environment variables
-const JWT_SECRET = process.env.JWT_SECRET;
-const SITE_PASSWORD = process.env.SITE_PASSWORD;
+const JWT_SECRET = process.env.JWT_SECRET || 'fallback_jwt_secret_do_not_use_in_production';
+const SITE_PASSWORD = process.env.SITE_PASSWORD || '21112020';
 
-if (!JWT_SECRET || !SITE_PASSWORD) {
-  throw new Error('Required environment variables are not set');
+// Log warning if using fallback values
+if (!process.env.JWT_SECRET || !process.env.SITE_PASSWORD) {
+  console.warn('Warning: Using fallback values for JWT_SECRET or SITE_PASSWORD. Please set these environment variables.');
 }
 
 export async function POST(request) {

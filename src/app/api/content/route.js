@@ -3,10 +3,11 @@ import jwt from 'jsonwebtoken';
 import pageContent from '../../../content/pageContent';
 import pageContentHe from '../../../content/pageContentHe';
 
-const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET || 'fallback_jwt_secret_do_not_use_in_production';
 
-if (!JWT_SECRET) {
-  throw new Error('JWT_SECRET environment variable is not set');
+// Log warning if using fallback value
+if (!process.env.JWT_SECRET) {
+  console.warn('Warning: Using fallback value for JWT_SECRET. Please set this environment variable.');
 }
 
 export async function GET(request) {
